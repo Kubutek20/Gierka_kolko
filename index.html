@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Gra kółko i krzyżyk</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <select id="tryb-gry">
+      <option value="pvp">Gracz vs Gracz</option>
+      <option value="latwy">Gracz vs PC (Easy)</option>
+      <option value="sredni">Gracz vs PC (Medium)</option>
+    </select>
+
+    <p class="tura">
+      <span>Kolej gracza: </span>
+      <span id="aktywny-gracz"></span>
+    </p>
+
+    <div class="krawedzie">
+      <p class="panel"></p>
+
+      <div class="plansza">
+        <div class="kwadrat" data-pos="0"></div>
+        <div class="kwadrat" data-pos="1"></div>
+        <div class="kwadrat" data-pos="2"></div>
+        <div class="kwadrat" data-pos="3"></div>
+        <div class="kwadrat" data-pos="4"></div>
+        <div class="kwadrat" data-pos="5"></div>
+        <div class="kwadrat" data-pos="6"></div>
+        <div class="kwadrat" data-pos="7"></div>
+        <div class="kwadrat" data-pos="8"></div>
+      </div>
+      <button class="przycisk-resetu">Zresetuj grę</button>
+    </div>
+
+    <script src="index.js"></script>
+    <script src="kolor.js"></script>
+  </body>
+</html>

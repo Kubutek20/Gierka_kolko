@@ -1,0 +1,92 @@
+* {
+  color: gray;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.krawedzie {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.panel {
+  height: 50px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.plansza {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  grid-gap: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid gray;
+}
+
+.kwadrat {
+  background-color: white;
+  border-radius: 5px;
+  border: 2px solid gray;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.05% linear;
+}
+
+.kwadrat:hover {
+  background-color: #ddd;
+}
+
+.kwadrat--filled-X::after,
+.kwadrat--filled-X::before {
+  position: absolute;
+  content: "";
+  height: 5px;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  background-color: rgba(139, 131, 131, 0.452);
+}
+
+.kwadrat--filled-X::before {
+  transform: translateY(-50%) rotate(-45deg);
+}
+
+.kwadrat--filled-X::after {
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.kwadrat--filled-0::before {
+  position: absolute;
+  content: "";
+  height: 80%;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  border: 5px solid black;
+  transform: translate(-50%, -50%);
+}
+
+.przycisk-resetu {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.przycisk-resetu:hover {
+  background-color: #ddd;
+}
+
+.tura {
+  font-size: 30px;
+  font-weight: 600;
+  text-align: center;
+}
